@@ -16,3 +16,7 @@ mkth() {
 updateall() {
   brew update && brew upgrade
 }
+
+gendigest() {
+  echo -n $1 | openssl dgst -binary -sha256 | openssl base64
+}
